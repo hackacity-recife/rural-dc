@@ -1,0 +1,12 @@
+ge.exception = Ocorreu uma falha ao comunicar-se com o servidor
+ge.iFields = Preencha todos os campos
+### lo = avisos para login. ###
+lo.iLogPass = Usuário não cadastrado ou senha incorreta.
+lo.iUser = Não há cadastro com este e-mail.
+lo.iPass = Senhas não conferem.
+lo.userExists = O e-mail informado já se encontra cadastrado.
+lo.recoverPass = Verifique seu e-mail pois uma nova senha foi gerada e enviada para você.
+lo.userConfirm = Enviamos um e-mail para a confirmação do cadastro.
+lo.userWaiting = Estamos aguardando a confirmação do cadastro. Verifique o e-mail de confirmação que enviamos.
+lo.userConfirmed = Seu e-mail foi confirmado!
+lo.userChange = Usuário alterado.

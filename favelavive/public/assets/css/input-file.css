@@ -1,0 +1,62 @@
+.box-file {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+/*.box-file:after {
+    content: 'Nenhum arquivo selecionado';
+    display: block;
+    font-size: 12px;
+    margin-top: -10px;
+    color: #c0c0c0;
+}*/
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0 !important;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    /*padding: 0.625rem 1.25rem;*/
+    padding: 4px 10px;
+    /* 10px 20px */
+}
+input#contrato-1,
+input#nota-1,
+input#pedido-1,
+input#proposta-1,
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile + label * {
+    padding-left: 10px;
+}
+/* style 1 */
+.inputfile-1 + label {
+    color: #fff;
+    background-color: #c0c0c0;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: #c0c0c0;
+}
+
+

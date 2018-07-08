@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+### SIMULADOR
+GET		/api/simular													@controllers.SimuladorController.simular()
+
+### ADMIN
+GET		/																@controllers.HomeController.main()
+
+### API
+POST	/api/pessoas													@controllers.PessoaController.acessar()
+GET		/api/pessoas/:pessoaId											@controllers.PessoaController.detalhes(pessoaId: Long)
+	
+POST	/api/pessoas/atividades/:pessoaId									@controllers.AtividadeController.criar(pessoaId: Long)
+GET		/api/pessoas/:pessoaId/contribuicoes							@controllers.AtividadeController.contribuicoes(pessoaId: Long)
+
+GET		/api/favelas/:uf												@controllers.FavelaController.listarUf(uf: String)
+GET		/api/favelas/:uf/:cidade										@controllers.FavelaController.listarCidade(uf: String, cidade: String)
+GET		/api/atividades/favelas/:favelaId								@controllers.AtividadeController.listarFavela(favelaId: Long)
+GET		/api/atividades/:uf/:cidade										@controllers.AtividadeController.listarCidade(uf: String, cidade: String, pessoaId: Long?=0)
+GET		/api/atividades/:atividadeId/contribuir/:pessoaId				@controllers.AtividadeController.contribuindo(atividadeId: Long, pessoaId: Long)
+POST	/api/atividades/:atividadeId/contribuir/:pessoaId				@controllers.AtividadeController.contribuir(atividadeId: Long, pessoaId: Long)
+DELETE	/api/atividades/:atividadeId/contribuir/:pessoaId				@controllers.AtividadeController.cancelarContribuicao(atividadeId: Long, pessoaId: Long)
+
+GET		/api/municipios/:uf												@controllers.MunicipioController.listarUf(uf: String)
+
+### ASSETS
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
